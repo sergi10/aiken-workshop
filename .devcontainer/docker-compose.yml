@@ -3,7 +3,7 @@ services:
   environment:
     build: .
     environment:
-      NETWORK: ${NETWORK:-preview}
+      NETWORK: ${NETWORK:-preprod}
     volumes:
       # Mounts the project folder to '/workspace'. The target path inside the container
       # should match what your application expects. In this case, the compose file is
