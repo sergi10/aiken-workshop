@@ -1,0 +1,21 @@
+{
+  "name": "oracle",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "tsx deploy.ts",
+    "update": "tsx update.ts",
+    "delete": "tsx delete.ts",
+    "build": "cd onchain && aiken build"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@meshsdk/core": "^1.7.8",
+    "cbor": "^9.0.2",
+    "dotenv": "^16.4.5",
+    "tsx": "^4.19.1"
+  }
+}
