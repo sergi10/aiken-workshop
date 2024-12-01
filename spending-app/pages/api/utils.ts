@@ -1,5 +1,5 @@
 import { applyParamsToScript, BlockfrostProvider, Data, MeshTxBuilder, PlutusScript } from "@meshsdk/core";
-import plutusScript from "../../onchain/plutus.json";
+import plutusScript from "../../../onchain/plutus.json";
 import cbor from "cbor";
 
 export function getPlutusScript(title: String): PlutusScript {
@@ -26,11 +26,12 @@ export function getPlutusScriptParams(title:string, params: object[] | Data[]): 
 }
 
 export function initializeBlockchainProvider(): BlockfrostProvider {
-  const apiKey = process.env.NEXT_PUBLIC_BLOCKFROST;
-  if (!apiKey) {
-    throw new Error("Blockfrost API key is missing");
-  }
-  return new BlockfrostProvider(apiKey);
+  // const apiKey = process.env.NEXT_PUBLIC_BLOCKFROST;
+  // if (!apiKey) {
+  //   throw new Error("Blockfrost API key is missing");
+  // }
+  // return new BlockfrostProvider(apiKey);
+  return new BlockfrostProvider("preproducB9YHCfMZOTFaz542Yxqi87PLOXMGcn");
 }
 
 export const blockchainProvider = initializeBlockchainProvider()

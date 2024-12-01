@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@meshsdk/react": "^1.7.22"
+  }
+}

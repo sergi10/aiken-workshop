@@ -1,0 +1,106 @@
+{
+  "preamble": {
+    "title": "sergi10/onchain",
+    "description": "Aiken contracts for project 'sergi10/onchain'",
+    "version": "0.0.0",
+    "plutusVersion": "v3",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.1.7+e2fb28b"
+    },
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "onchain.buenos_aires.spend",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/onchain~1Datum"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/onchain~1Redeemer"
+        }
+      },
+      "compiledCode": "589a01010032323232323225333002323232323253330073370e900118041baa0011323322533300a3370e900018059baa00513232533300f301100213371e6eb8c040c038dd5003a4410d4275656e6f73204169726573210016375c601e00260186ea801458c030004c030c034004c024dd50008b1805180580198048011804001180400098021baa00114984d9595cd2ab9d5573caae7d5d0aba21",
+      "hash": "9543a19e7cb4c7171340905f70aad9b27c9d420b29ea4aa108e26378"
+    },
+    {
+      "title": "onchain.buenos_aires.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "589a01010032323232323225333002323232323253330073370e900118041baa0011323322533300a3370e900018059baa00513232533300f301100213371e6eb8c040c038dd5003a4410d4275656e6f73204169726573210016375c601e00260186ea801458c030004c030c034004c024dd50008b1805180580198048011804001180400098021baa00114984d9595cd2ab9d5573caae7d5d0aba21",
+      "hash": "9543a19e7cb4c7171340905f70aad9b27c9d420b29ea4aa108e26378"
+    },
+    {
+      "title": "onchain.hello_world.spend",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/onchain~1Datum"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/onchain~1Redeemer"
+        }
+      },
+      "compiledCode": "589a01010032323232323225333002323232323253330073370e900118041baa0011323322533300a3370e900018059baa00513232533300f301100213371e6eb8c040c038dd5003a4410d48656c6c6f2c20576f726c64210016375c601e00260186ea801458c030004c030c034004c024dd50008b1805180580198048011804001180400098021baa00114984d9595cd2ab9d5573caae7d5d0aba21",
+      "hash": "074b42c9e39ee1a0abc086e03ff476c736fd83be47f7a11288418f70"
+    },
+    {
+      "title": "onchain.hello_world.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "589a01010032323232323225333002323232323253330073370e900118041baa0011323322533300a3370e900018059baa00513232533300f301100213371e6eb8c040c038dd5003a4410d48656c6c6f2c20576f726c64210016375c601e00260186ea801458c030004c030c034004c024dd50008b1805180580198048011804001180400098021baa00114984d9595cd2ab9d5573caae7d5d0aba21",
+      "hash": "074b42c9e39ee1a0abc086e03ff476c736fd83be47f7a11288418f70"
+    }
+  ],
+  "definitions": {
+    "ByteArray": {
+      "dataType": "bytes"
+    },
+    "VerificationKeyHash": {
+      "title": "VerificationKeyHash",
+      "dataType": "bytes"
+    },
+    "onchain/Datum": {
+      "title": "Datum",
+      "anyOf": [
+        {
+          "title": "Datum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "owner",
+              "$ref": "#/definitions/VerificationKeyHash"
+            }
+          ]
+        }
+      ]
+    },
+    "onchain/Redeemer": {
+      "title": "Redeemer",
+      "anyOf": [
+        {
+          "title": "Redeemer",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "msg",
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
